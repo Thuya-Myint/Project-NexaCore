@@ -1,0 +1,254 @@
+@import "tailwindcss";
+@theme {
+   --font-display: "Satoshi", "sans-serif";
+   --color-bat-blood: #d94560;
+   --color-bat-blood1:#ec1227;
+   --color-mysterious-blue: #4c7e81;
+   --color-blue-berry: #4c408a;
+   --color-hadfield-blue: #4574f2;
+   --color-white-smoke: #c8c8c8;
+   --color-super-silver: #eeeeee;
+}
+
+@font-face {
+   font-family: "Fonarto";
+   src: url('./assets/font/fonarto/Fonarto.ttf');
+}
+.font-primary{
+   font-family: "Fonarto";
+}
+* {
+   -webkit-user-select: none;
+   /* Safari */
+   -moz-user-select: none;
+   /* Firefox */
+   -ms-user-select: none;
+   /* Internet Explorer/Edge */
+   user-select: none;
+   /* Standard */
+}
+.rotatedBorder{
+   animation: rotateBorder 4s linear infinite;
+}
+@keyframes rotateBorder {
+   from{
+      transform: rotate(0deg);
+      border-style: dotted;
+   }to{
+      transform: rotate(360deg);
+      border-style: dashed;
+   }
+}
+
+
+
+
+.nexa-core {
+    animation: step-start 1s infinite;
+}
+
+.shadow-animation {
+    /* animation: shadow 4s infinite cubic-bezier(0.215, 0.610, 0.355, 1); */
+}
+
+@keyframes shadow {
+    0% {
+        box-shadow: 0px 2px 100px rgba(0, 0, 0, 0.4);
+        background-color: 0px 2px 100px rgba(0, 0, 0, 0.6);
+    }
+
+    25% {
+        box-shadow: 0px 2px 100px rgba(0, 0, 0, 1);
+        background-color: 0px 2px 100px rgba(0, 0, 0, 0.4);
+    }
+
+    50% {
+        box-shadow: 0px 2px 100px rgba(0, 0, 0, 0.4);
+        background-color: 0px 2px 100px rgba(0, 0, 0, 0.6);
+    }
+
+    75% {
+        box-shadow: 0px 2px 100px rgba(0, 0, 0, 1);
+        background-color: 0px 2px 100px rgba(0, 0, 0, 0.4);
+    }
+
+    100% {
+        box-shadow: 0px 2px 100px rgba(0, 0, 0, 0.4);
+        background-color: 0px 2px 100px rgba(0, 0, 0, 0.6);
+    }
+}
+
+.outer {
+    background-color: rgba(136, 245, 241, 0.4);
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.4);
+}
+
+.inner,
+.center {
+    /* background-color: rgba(0,0,0,0.1); */
+    background-color: rgb(162, 236, 249);
+}
+
+.inner {
+    animation: inner 4s infinite;
+}
+
+.center {
+    animation: center 4s infinite;
+}
+
+.outer {
+    animation: outer 10s infinite;
+}
+
+@keyframes inner {
+    0% {
+        /* width: 80px; */
+        height: 70px;
+        transform: rotate(20deg);
+    }
+
+    25% {
+        /* width: 90px; */
+        height: 90px;
+        transform: rotate(40deg);
+    }
+
+    50% {
+        /* width: 80px; */
+        height: 70px;
+        transform: rotate(-20deg);
+    }
+
+    75% {
+        /* width: 90px; */
+        height: 90px;
+        transform: rotate(-40deg);
+    }
+
+    100% {
+        /* width: 80px; */
+        height: 70px;
+        transform: rotate(20deg);
+    }
+}
+
+@keyframes center {
+    0% {
+        height: 70px;
+        width: 60px;
+        transform: rotate(-20deg);
+    }
+
+    25% {
+        height: 90px;
+        width: 50px;
+        transform: rotate(-40deg);
+    }
+
+    50% {
+        height: 70px;
+        width: 60px;
+        transform: rotate(20deg);
+    }
+
+    75% {
+        height: 90px;
+        width: 50px;
+        transform: rotate(40deg);
+
+    }
+
+    100% {
+        height: 70px;
+        width: 60px;
+        transform: rotate(20deg);
+    }
+}
+
+.rotateOuterMost {
+    animation: rotateOuterMost 10s infinite;
+    /* animation:inner  4s infinite; */
+}
+
+@keyframes rotateOuterMost {
+    0% {
+        rotate: 0deg;
+        scale: 0.8;
+        -webkit-backdrop-filter: brightness(1);
+    }
+
+    25% {
+        rotate: 90deg;
+        scale: 1;
+        -webkit-backdrop-filter: brightness(0.1);
+    }
+
+    50% {
+        rotate: 180deg;
+        scale: 0.8;
+        -webkit-backdrop-filter: brightness(1);
+    }
+
+    75% {
+        rotate: 270deg;
+        scale: 1;
+        -webkit-backdrop-filter: brightness(0.1);
+    }
+
+    100% {
+        rotate: 360deg;
+        scale: 0.8;
+        -webkit-backdrop-filter: brightness(1);
+    }
+}
+
+@keyframes outer {
+    0% {
+        scale: 1.6;
+        /* transform: rotate(0deg); */
+
+    }
+
+    25% {
+        scale: 0.1;
+        /* transform: rotate(90deg); */
+    }
+
+    50% {
+        scale: 1.6;
+        /* transform: rotate(180deg); */
+    }
+
+    75% {
+        scale: 0.1;
+        /* transform: rotate(270deg); */
+    }
+
+    100% {
+        scale: 1.6;
+        /* transform: rotate(360deg); */
+    }
+}
+
+.service {
+    background-image: url('./assets/image/softwarekit.jpg');
+    /* background-attachment: fixed; */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+}
+
+.bg-Blur {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.bgFooterTeam {
+    background-image: url('./assets/image/footerSoftwareTeam.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* background-position: center; */
+}
